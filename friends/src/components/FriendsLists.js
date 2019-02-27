@@ -17,7 +17,13 @@ const FriendsList = props => {
         })}
         </div>
         
-        <FormComponent />
+        <FormComponent
+        submitFriend={props.submitFriend}
+        handleChange={props.handleChange}
+        name={props.name}
+        age={props.age}
+        email={props.email}
+        />
     
       </>
     

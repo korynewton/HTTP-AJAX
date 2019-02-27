@@ -8,7 +8,10 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      list : []
+      list : [],
+      name: '',
+      age: '',
+      email: ''
     }
   }
 
@@ -22,11 +25,38 @@ componentDidMount() {
   } )
 }
 
+submitFriend = () => {
+  const newFriend = {
+      name : this.state.name,
+      age : Number(this.state.age),
+      email : this.state.email
+  }
+  axios.post("http://localhost:5000/friends", newFriend)
+      .then( res => {
+        this.setState({ list: res.data })
+        console.log(res)
+      })
+      .catch(err => console.log(err))
+}
+
+handleChange = (e) => {
+  this.setState({
+      [e.target.name] : e.target.value
+  })
+}
+
 
   render() {
     return (
       <div>
-        <FriendsList friends={this.state.list} />
+        <FriendsList
+        friends={this.state.list}
+        submitFriend={this.submitFriend}
+        handleChange={this.handleChange}
+        name={this.state.name}
+        age={this.state.age}
+        email={this.state.email}
+        />
       </div>
     );
   }

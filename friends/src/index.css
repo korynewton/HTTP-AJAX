@@ -29,8 +29,9 @@
   margin: 2px;
 }
 
-.submitButton {
-  margin: 10px auto;
+.formButton {
+  display: inline-block;
+  margin: 5px;
 }
 
 .addHeader {
