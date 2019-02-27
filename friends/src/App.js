@@ -34,7 +34,12 @@ submitFriend = (e) => {
   }
   axios.post("http://localhost:5000/friends", newFriend)
       .then( res => {
-        this.setState({ list: res.data })
+        this.setState({ 
+          list: res.data,
+          name: '',
+          age: '',
+          email: '' 
+        })
         console.log(res)
       })
       .catch(err => console.log(err))
