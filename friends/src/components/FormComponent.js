@@ -5,18 +5,9 @@ const FormComponent = () => {
         <>
             <h3 className='addHeader'>Add a friend form:</h3>
             <form className="form">
-                <label>
-                Name:
-                <input type="text" name="name" />
-                </label>
-                <label>
-                Age:
-                <input type="text" name="name" />
-                </label>
-                <label>
-                Email:
-                <input type="text" name="name" />
-                </label>
+                <input type="text"  placeholder="Name" />
+                <input type="text" placeholder="Age" />
+                <input type="text" placeholder="Email" />
                 <button className='submitButton'>Submit</button>
             </form>
         </>

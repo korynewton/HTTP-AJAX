@@ -21,10 +21,8 @@
 .form {
   display: flex;
   flex-flow: column  nowrap;
-  align-items: flex-end;
-  margin: 10px auto;
-  width: 18%;
-  
+  align-items: center;
+  margin: 10px auto;  
 }
 
 .form input {
