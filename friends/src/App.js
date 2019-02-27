@@ -22,10 +22,11 @@ componentDidMount() {
   } )
 }
 
+
   render() {
     return (
       <div>
-        <FriendsList friends={this.state.list}/>
+        <FriendsList friends={this.state.list} />
       </div>
     );
   }
