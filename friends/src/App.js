@@ -25,7 +25,8 @@ componentDidMount() {
   } )
 }
 
-submitFriend = () => {
+submitFriend = (e) => {
+  e.preventDefault();
   const newFriend = {
       name : this.state.name,
       age : Number(this.state.age),
