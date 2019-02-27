@@ -14,10 +14,10 @@ class App extends Component {
 
 componentDidMount() {
   axios.get("http://localhost:5000/friends") 
-  .then( (res) => {
-    console.log(res)
+  .then( res => {
+    this.setState({ list : res.data})  
   } )
-  .catch( (err) => {
+  .catch( err => {
     console.log(err)
   } )
 }
@@ -25,7 +25,7 @@ componentDidMount() {
   render() {
     return (
       <div>
-        <FriendsList />
+        <FriendsList friends={this.state.list}/>
       </div>
     );
   }
