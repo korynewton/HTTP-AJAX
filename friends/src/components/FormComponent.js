@@ -20,7 +20,7 @@ class FormComponent extends React.Component {
     submitFriend = () => {
         const newFriend = {
             name : this.state.name,
-            age : this.state.age,
+            age : Number(this.state.age),
             email : this.state.email
         }
         axios.post("http://localhost:5000/friends", newFriend)
@@ -38,6 +38,8 @@ class FormComponent extends React.Component {
                     <input type="number" placeholder="Age" onChange={this.handleChange} name="age" value={this.state.age}/>
                     <input type="text" placeholder="Email" onChange={this.handleChange} name="email" value={this.state.email} />
                     <button onClick={this.submitFriend}className='submitButton'>Submit</button>
+                    <button onClick={this.submitFriend}className='submitButton'>Edit</button>
+
                 </form>
             </>
         )
