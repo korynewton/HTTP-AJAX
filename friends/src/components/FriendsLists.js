@@ -25,6 +25,7 @@ const FriendsList = props => {
         submitFriend={props.submitFriend}
         updateFriend={props.updateFriend}
         handleChange={props.handleChange}
+        isUpdating={props.isUpdating}
         item={props.item}
 
         />

@@ -13,7 +13,8 @@ class App extends Component {
         name: '',
         age: '',
         email: ''
-      }
+      },
+      isUpdating: false
     }
   }
 
@@ -29,11 +30,6 @@ componentDidMount() {
 
 submitFriend = (e) => {
   e.preventDefault();
-  // const newFriend = {
-  //     name : this.state.name,
-  //     age : Number(this.state.age),
-  //     email : this.state.email
-  // }
   axios.post("http://localhost:5000/friends", this.state.item)
       .then( res => {
         this.setState({ 
@@ -44,7 +40,6 @@ submitFriend = (e) => {
             email: '' 
           }
         })
-        console.log(res)
       })
       .catch(err => console.log(err))
 }
@@ -62,9 +57,9 @@ handleChange = (e) => {
 populateUpdate = (e, id) => {
   e.preventDefault();
   const selectedItem = this.state.list.find(i => i.id === id)
-  // console.log(selectedItem)
   this.setState({
-    item : selectedItem
+    item : selectedItem,
+    isUpdating : true
   })
 }
 
@@ -104,6 +99,7 @@ deleteFriend = (e,id) => {
         populateUpdate={this.populateUpdate}
         updateFriend={this.updateFriend}
         deleteFriend={this.deleteFriend}
+        isUpdating={this.isUpdating}
         />
       </div>
     );
