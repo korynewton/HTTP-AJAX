@@ -14,7 +14,7 @@ const FriendsList = props => {
                     <h6>email: {f.email}</h6>
                     <div>
                         <button onClick={(e) => props.populateUpdate(e, f.id)}>edit</button>
-                        <button>delete</button>
+                        <button onClick={(e) => props.deleteFriend(e, f.id)}>delete</button>
                     </div>
                 </div>
             )

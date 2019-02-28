@@ -62,7 +62,7 @@ handleChange = (e) => {
 populateUpdate = (e, id) => {
   e.preventDefault();
   const selectedItem = this.state.list.find(i => i.id === id)
-  console.log(selectedItem)
+  // console.log(selectedItem)
   this.setState({
     item : selectedItem
   })
@@ -81,6 +81,15 @@ updateFriend = (e, item) => {
       }
     }))
     .catch( err => console.log(err))
+}
+
+deleteFriend = (e,id) => {
+  e.preventDefault();
+  axios.delete(`http://localhost:5000/friends/${id}`)
+  .then((res) => this.setState({
+    list : res.data
+  }))
+  .catch((err) => console.log(err))
 
 }
 
@@ -94,6 +103,7 @@ updateFriend = (e, item) => {
         item={this.state.item}
         populateUpdate={this.populateUpdate}
         updateFriend={this.updateFriend}
+        deleteFriend={this.deleteFriend}
         />
       </div>
     );
