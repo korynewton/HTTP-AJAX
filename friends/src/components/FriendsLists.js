@@ -12,6 +12,10 @@ const FriendsList = props => {
                     <h3>{f.name}</h3>
                     <h6>age: {f.age}</h6>
                     <h6>email: {f.email}</h6>
+                    <div>
+                        <button onClick={(e) => props.populateUpdate(e, f.id)}>edit</button>
+                        <button>delete</button>
+                    </div>
                 </div>
             )
         })}
@@ -20,9 +24,8 @@ const FriendsList = props => {
         <FormComponent
         submitFriend={props.submitFriend}
         handleChange={props.handleChange}
-        name={props.name}
-        age={props.age}
-        email={props.email}
+        item={props.item}
+
         />
     
       </>
