@@ -10,6 +10,7 @@ const FormComponent = (props) => {
                     <input type="email" placeholder="Email" onChange={props.handleChange} name="email" value={props.item.email} />
                     <div className="buttonDiv">
                         <button onClick={props.submitFriend}className='formButton'>Submit</button>
+                        
                     </div>
                         
 

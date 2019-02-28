@@ -57,19 +57,13 @@ handleChange = (e) => {
   })
 }
 
-// populateUpdate = (e, id) => {
-//   e.preventDefault();
-//   this.setState({
-//     this.state.list.find(item => item.id === id) {
-//       name : item.name,
-//       age: item.age,
-//       email: item.email
-//     }
-//   })
-// }
-
-
-
+populateUpdate = (e, id) => {
+  e.preventDefault();
+  const selectedItem = this.state.list.find(i => i.id === id)
+  this.setState({
+    item : selectedItem
+  })
+}
 
   render() {
     return (
