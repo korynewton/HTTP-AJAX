@@ -13,8 +13,8 @@ const FriendsList = props => {
                     <h6>age: {f.age}</h6>
                     <h6>email: {f.email}</h6>
                     <div>
-                        <button onClick={(e) => props.populateUpdate(e, f.id)}>edit</button>
-                        <button onClick={(e) => props.deleteFriend(e, f.id)}>delete</button>
+                        <button className="editbtn" onClick={(e) => props.populateUpdate(e, f.id)}>edit</button>
+                        <button className="deletebtn" onClick={(e) => props.deleteFriend(e, f.id)}>delete</button>
                     </div>
                 </div>
             )

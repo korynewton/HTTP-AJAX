@@ -4,6 +4,7 @@
   text-align: center;
   width: 25%;
   margin: 0 auto;
+  padding-bottom: 10px;
 }
 
 .list h1 {
@@ -40,4 +41,32 @@
 
 .individualFriend {
   line-height: 0;
+}
+
+.formButton {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+}
+.formButton:hover {
+  cursor: pointer;
+}
+
+.editbtn {
+  background-color: #428bca;
+  color: white;
+  border: none;
+  margin-right: 5px;
+}
+.editbtn:hover {
+  cursor: pointer;
+}
+
+.deletebtn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+}
+.deletebtn:hover {
+  cursor: pointer;
 }

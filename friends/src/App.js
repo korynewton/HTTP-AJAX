@@ -73,7 +73,8 @@ updateFriend = (e, item) => {
         name: '',
         age: '',
         email: ''
-      }
+      },
+      isUpdating: false
     }))
     .catch( err => console.log(err))
 }
@@ -99,7 +100,7 @@ deleteFriend = (e,id) => {
         populateUpdate={this.populateUpdate}
         updateFriend={this.updateFriend}
         deleteFriend={this.deleteFriend}
-        isUpdating={this.isUpdating}
+        isUpdating={this.state.isUpdating}
         />
       </div>
     );
