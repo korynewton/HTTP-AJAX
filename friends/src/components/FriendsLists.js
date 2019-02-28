@@ -23,6 +23,7 @@ const FriendsList = props => {
         
         <FormComponent
         submitFriend={props.submitFriend}
+        updateFriend={props.updateFriend}
         handleChange={props.handleChange}
         item={props.item}
 

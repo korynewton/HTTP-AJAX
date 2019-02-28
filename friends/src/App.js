@@ -38,9 +38,11 @@ submitFriend = (e) => {
       .then( res => {
         this.setState({ 
           list: res.data,
-          name: '',
-          age: '',
-          email: '' 
+          item : {
+            name: '',
+            age: '',
+            email: '' 
+          }
         })
         console.log(res)
       })
@@ -60,9 +62,26 @@ handleChange = (e) => {
 populateUpdate = (e, id) => {
   e.preventDefault();
   const selectedItem = this.state.list.find(i => i.id === id)
+  console.log(selectedItem)
   this.setState({
     item : selectedItem
   })
+}
+
+
+updateFriend = (e, item) => {
+  e.preventDefault();
+  axios.put(`http://localhost:5000/friends/${item.id}`, item)
+    .then( res => this.setState({
+      list: res.data,
+      item: {
+        name: '',
+        age: '',
+        email: ''
+      }
+    }))
+    .catch( err => console.log(err))
+
 }
 
   render() {
@@ -74,6 +93,7 @@ populateUpdate = (e, id) => {
         handleChange={this.handleChange}
         item={this.state.item}
         populateUpdate={this.populateUpdate}
+        updateFriend={this.updateFriend}
         />
       </div>
     );
