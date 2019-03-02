@@ -1,0 +1,72 @@
+.list {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 1px solid black;
+  text-align: center;
+  width: 25%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.list h1 {
+  text-decoration: underline;
+}
+
+.list h3 {
+  font-weight: 800;
+}
+
+.list h6 {
+  font-weight: 400;
+}
+
+.form {
+  display: flex;
+  flex-flow: column  nowrap;
+  align-items: center;
+  margin: 10px auto;  
+}
+
+.form input {
+  margin: 2px;
+}
+
+.formButton {
+  display: inline-block;
+  margin: 5px;
+}
+
+.addHeader {
+  text-align: center;
+}
+
+.individualFriend {
+  line-height: 0;
+}
+
+.formButton {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+}
+.formButton:hover {
+  cursor: pointer;
+}
+
+.editbtn {
+  background-color: #428bca;
+  color: white;
+  border: none;
+  margin-right: 5px;
+}
+.editbtn:hover {
+  cursor: pointer;
+}
+
+.deletebtn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+}
+.deletebtn:hover {
+  cursor: pointer;
+}
